@@ -1,0 +1,27 @@
+### Project Requirements ###
+# Ignore ALL markdown files as per college assignment requirements
+*.md
+
+# Ignore log files
+*.log
+logs/
+
+### Maven Build ###
+target/
+*.class
+*.jar
+
+### Environment & Configuration ###
+.env
+.env.local
+.env.*.local
+
+### OS ###
+Thumbs.db
+
+### Misc ###
+*.tmp
+*.bak
+*.swp
+*.swo
+*~

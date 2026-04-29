@@ -1,0 +1,186 @@
+/* StudentList Component Specific Styles */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.header .btn-primary {
+  background-color: #2ecc71;
+  border: none;
+}
+
+.header .btn-primary:hover {
+  background-color: #27ae60;
+  box-shadow: 0 4px 8px rgba(46, 204, 113, 0.4);
+}
+
+/* Table Styling */
+.table-wrapper {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table thead {
+  background-color: #2c3e50;
+  color: white;
+  font-weight: 600;
+}
+
+.student-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.student-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #ecf0f1;
+  font-size: 14px;
+}
+
+.student-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.student-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.student-table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.actions .btn-edit,
+.actions .btn-delete {
+  padding: 6px 12px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Empty State */
+.empty-state {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.empty-state p {
+  color: #2c3e50;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header h1 {
+    font-size: 24px;
+    flex: 1 100%;
+    margin-bottom: 10px;
+  }
+
+  .student-table th,
+  .student-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .header h1 {
+    margin: 0;
+  }
+
+  .header .btn-primary {
+    width: 100%;
+  }
+
+  .student-table {
+    font-size: 12px;
+  }
+
+  .student-table th,
+  .student-table td {
+    padding: 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .actions .btn-edit,
+  .actions .btn-delete {
+    width: 100%;
+    padding: 8px 10px;
+  }
+
+  .empty-state {
+    padding: 40px 20px;
+  }
+
+  .empty-state p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-table th,
+  .student-table td {
+    padding: 8px 5px;
+    font-size: 11px;
+  }
+
+  .actions .btn-edit,
+  .actions .btn-delete {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
